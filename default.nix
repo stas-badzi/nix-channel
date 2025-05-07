@@ -1,4 +1,7 @@
 let
-  sources = import ./nix/sources.nix;
+  pkgs = import <nixpkgs> {};
+in
 
-in sources.nixpkgs
+{
+  doas-keepenv = pkgs.callPackage ./pkgs/doas-keepenv {};
+}
