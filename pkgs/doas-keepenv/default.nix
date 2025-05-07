@@ -34,7 +34,6 @@ stdenv.mkDerivation {
     wrapProgram $out/bin/doas-keepenv --prefix PATH : "${
       lib.makeBinPath [
         coreutils
-        doas
       ]
     }:/run/wrappers/bin/doas"
   '';
