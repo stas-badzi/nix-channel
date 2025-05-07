@@ -1,7 +1,4 @@
-let
-  pkgs = import <nixpkgs> {};
-in
-
-{
+{ pkgs ? import <nixpkgs> {} }:
+rec {
   doas-keepenv = pkgs.callPackage ./pkgs/doas-keepenv {};
 }
