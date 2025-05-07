@@ -1,10 +1,5 @@
 {
-  stdenv,
-  lib,
-  coreutils,
-  doas,
-  makeWrapper,
-  fetchurl,
+  stdenv,lib,coreutils,doas,makeWrapper,fetchurl,
 }:
 
 stdenv.mkDerivation {
@@ -29,13 +24,14 @@ stdenv.mkDerivation {
   '';
 
   installPhase = ''
-    mkdir -p $out/bin/
+    mkdir -p $out/bin
     install -m 755 doas-keepenv $out/bin
     wrapProgram $out/bin/doas-keepenv --prefix PATH : "${
       lib.makeBinPath [
         coreutils
       ]
     }:/run/wrappers/bin/doas"
+    # add the doas suid wrappper instead of literal doas
   '';
 
   meta = {
