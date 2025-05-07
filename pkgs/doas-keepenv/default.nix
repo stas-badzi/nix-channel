@@ -13,7 +13,7 @@ stdenv.mkDerivation {
 
   src = fetchurl {
     url = "https://github.com/stas-badzi/doas-keepenv/archive/refs/tags/1.0.tar.gz";
-    sha256 = "sha256-qviS2bepd19EUb0eFVHfsUsk3NsocL9q9LUk4KQhvic=";
+    sha256 = "00000000000000000000000000000000000000000000000000000000000000";
   };
 
   buildInputs = [
