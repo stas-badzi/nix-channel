@@ -20,7 +20,8 @@ stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-
+    echo ZZZZZZZZZZZZZZZZZZZZZZZZZZ...
+    sleep 60
   '';
 
   installPhase = ''
