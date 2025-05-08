@@ -20,7 +20,7 @@ stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-
+    echo "(ZXZXZXZXZXZXZXZXZXZXZXZXZXZ)..."
   '';
 
   installPhase = ''
