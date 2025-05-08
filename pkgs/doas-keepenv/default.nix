@@ -20,8 +20,7 @@ stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-    echo ZZZZZZZZZZZZZZZZZZZZZZZZZZ...
-    sleep 60
+
   '';
 
   installPhase = ''
@@ -42,5 +41,8 @@ stdenv.mkDerivation {
     license = lib.licenses.mit;
     #maintainers = with lib.maintainers; [ stasbadzi ];
     platforms = lib.platforms.linux;
-  };
+  }; 
+  
+  allowSubstitutes = true;
+  preferLocalBuild = false;
 }
