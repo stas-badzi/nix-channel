@@ -12,7 +12,7 @@ stdenv.mkDerivation {
   };
 
   buildInputs = [
-    #doas either way it requires manual setup, so having it as a dependecy doesn't help
+    doas
   ];
 
   nativeBuildInputs = [
@@ -41,8 +41,5 @@ stdenv.mkDerivation {
     license = lib.licenses.mit;
     #maintainers = with lib.maintainers; [ stasbadzi ];
     platforms = lib.platforms.linux;
-  }; 
-  
-  allowSubstitutes = true;
-  preferLocalBuild = false;
+  };
 }
