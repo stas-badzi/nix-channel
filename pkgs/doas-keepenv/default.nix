@@ -12,7 +12,7 @@ stdenv.mkDerivation {
   };
 
   buildInputs = [
-    doas
+    #doas either way it requires manual setup, so having it as a dependecy doesn't help
   ];
 
   nativeBuildInputs = [
