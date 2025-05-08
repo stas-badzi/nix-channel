@@ -13,7 +13,7 @@ _output\nixexprs.tar.gz: default.nix pkgs/*
 	nix store sign -k "$(priv_key_file)" "$$(realpath ./result)" --extra-experimental-features nix-command
 	nix copy --to "file:///$$PWD/_output/cache" "$$(realpath ./result)" --extra-experimental-features nix-command
 
-publish: _output
+publish: _output\nixexprs.tar.gz
 	cd $$(mktemp -d); git clone https://github.com/stas-badzi/stas-badzi.github.io.git; cd stas-badzi.github.io; cp -r $(current_dir)/_output/* .; git add .; git commit -m "nix-channel update"; git push
 
 clean:
